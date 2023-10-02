@@ -5,6 +5,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: choco install python3
-      - run: 
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        shell: pwsh
+      - run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module SqlServer, PSScriptAnalyzer
