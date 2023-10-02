@@ -4,8 +4,6 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - run: choco install python3
-        shell: pwsh
-      - run: |
+     - run: |
           Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module SqlServer, PSScriptAnalyzer
+          Install-Module NTFSSecurity, PSScriptAnalyzer
